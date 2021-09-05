@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Content from "../components/Content";
-import Input from "../components/input";
+import Input from "../components/Input";
 // import axios from "axios";
 import { createContext, useState } from "react";
 import Layout from "../components/Layout";
