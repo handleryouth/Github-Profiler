@@ -1,0 +1,26 @@
+@import "@fontsource/space-mono";
+@import "./width.scss";
+@import "./mixins.scss";
+@import "./navbar";
+@import "./home";
+@import "./input";
+@import "./content";
+@import "./profilename";
+@import "./repositories";
+@import "./additionaldetail";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Space Mono", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}

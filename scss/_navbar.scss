@@ -1,0 +1,17 @@
+.navbar {
+  width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1{
+    margin: 0;
+  }
+  &__theme {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    h3 {
+      margin-right: 0.5rem;
+    }
+  }
+}

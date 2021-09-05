@@ -1,0 +1,19 @@
+.input {
+  width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  &__input {
+    height: 2.8rem;
+    width: 28rem;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+  &__button {
+    height: 2.8rem;
+    width: 6rem;
+  }
+}

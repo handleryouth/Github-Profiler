@@ -1,0 +1,11 @@
+.additionaldetail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__location, &__twitter, &__blog, &__company{
+        display: flex;
+        align-items: center;
+        p{
+            margin-left: 1rem;
+        }
+    }
+}

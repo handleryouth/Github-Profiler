@@ -1,0 +1,24 @@
+.content {
+  width: $width;
+  border-radius: 10px;
+  display: flex;
+  padding: 2rem;
+
+  &__imagecontainer,
+  &__profilecontainer {
+    flex-basis: 20%;
+  }
+  &__imagecontainer {
+    &__image {
+      border-radius: 100%;
+    }
+  }
+  &__profilecontainer {
+    flex-grow: 1;
+    margin-left: 1.5rem;
+    &__bio {
+      font-size: 1.3rem;
+      margin: 1.5rem 0;
+    }
+  }
+}
