@@ -1,5 +1,5 @@
 @import "@fontsource/space-mono";
-@import "./width.scss";
+@import "./variabels.scss";
 @import "./mixins.scss";
 @import "./navbar";
 @import "./home";
@@ -18,7 +18,8 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  padding: 0;
+  min-width: 320px;
 }
 
 a {

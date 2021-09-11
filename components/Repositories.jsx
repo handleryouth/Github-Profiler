@@ -19,17 +19,17 @@ export default function Repositories() {
       }
     >
       <div className="repositories__repos">
-        <p>Repos</p>
+        <p className="repositories__following__title">Repos</p>
         <p className="repositories__repos__value">6969</p>
       </div>
 
       <div className="repositories__following">
-        <p>Following</p>
+        <p className="repositories__following__title">Following</p>
         <p className="repositories__following__value">6969</p>
       </div>
 
       <div className="repositories__followers">
-        <p>followers</p>
+        <p className="repositories__following__title">followers</p>
         <p className="repositories__followers__value">6969</p>
       </div>
     </div>

@@ -3,6 +3,12 @@
   border-radius: 10px;
   display: flex;
   padding: 2rem;
+  @media (max-width: 768px){
+    padding: clamp(0rem, 2vw, 2rem);
+    width: clamp(19rem, 84vw, 40rem);
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__imagecontainer,
   &__profilecontainer {
@@ -16,8 +22,12 @@
   &__profilecontainer {
     flex-grow: 1;
     margin-left: 1.5rem;
+    @media (max-width: 508px){
+      margin-left: 0;
+      text-align: center;
+    }
     &__bio {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin: 1.5rem 0;
     }
   }

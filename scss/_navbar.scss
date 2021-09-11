@@ -14,4 +14,7 @@
       margin-right: 0.5rem;
     }
   }
+  @media (max-width: 768px){
+    width: clamp(17rem, 84vw, 40rem);
+  }
 }
