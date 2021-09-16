@@ -1,23 +1,22 @@
 import Head from "next/head";
 import Content from "../components/Content";
 import Input from "../components/Input";
-// import axios from "axios";
+import axios from "axios";
 import { createContext, useState } from "react";
 import Layout from "../components/Layout";
 
-// export const getStaticProps = async () => {
-//   const res = await axios.get("https://api.github.com/users/octocat");
+export const getStaticProps = async () => {
+  const res = await axios.get("https://api.github.com/users/octocat");
 
-//   return {
-//     props: { datas: res.data },
-//   };
-// };
+  return {
+    props: { datas: res.data },
+  };
+};
 
 export const profileData = createContext();
 
 export default function Home({ datas }) {
-  // const [searchResult, setSearchResult] = useState(datas);
-  // console.log(searchResult);
+  const [searchResult, setSearchResult] = useState(datas);
   const [darkTheme, setDarkTheme] = useState(true);
 
   return (
@@ -32,8 +31,7 @@ export default function Home({ datas }) {
       <Head>
         <title>Github Project using Nextjs</title>
       </Head>
-      {/* <profileData.Provider value={{ searchResult, setSearchResult }}> */}
-      <profileData.Provider value={{ darkTheme, setDarkTheme }}>
+      <profileData.Provider value={{ darkTheme, setDarkTheme, searchResult, setSearchResult }}>
         <Layout />
 
         <div>

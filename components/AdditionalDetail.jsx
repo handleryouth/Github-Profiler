@@ -3,8 +3,8 @@ import { useContext } from "react";
 import { profileData } from "../pages";
 
 export default function AdditionalDetail() {
-  // const { searchResult } = useContext(profileData);
-  // const { location, twitter_username, company, blog } = searchResult;
+  const { searchResult } = useContext(profileData);
+  const { location, twitter_username, company, blog } = searchResult;
   return (
     <div className="additionaldetail">
       <div className="additionaldetail__location">
@@ -15,8 +15,7 @@ export default function AdditionalDetail() {
           height="20px"
         />
         <p>
-          loremipsum
-          {/* {location !== null ? location : "Unavailable"} */}
+          {location !== null ? location : "Unavailable"}
         </p>
       </div>
 
@@ -28,8 +27,7 @@ export default function AdditionalDetail() {
           height="20px"
         />
         <p>
-          {/* {twitter_username !== null ? twitter_username : "Unavailable"} */}
-          loremipsum
+          {twitter_username !== null ? twitter_username : "Unavailable"}
         </p>
       </div>
 
@@ -41,8 +39,7 @@ export default function AdditionalDetail() {
           height="20px"
         />
         <p>
-          {/* {blog !== "" ? blog : "Unavailable"} */}
-          loremipsum
+          {blog !== "" ? blog : "Unavailable"}
         </p>
       </div>
 
@@ -54,8 +51,7 @@ export default function AdditionalDetail() {
           height="20px"
         />
         <p>
-          {/* {company !== null ? company : "Unavailable"} */}
-          loremipsum
+          {company !== null ? company : "Unavailable"}
         </p>
       </div>
     </div>

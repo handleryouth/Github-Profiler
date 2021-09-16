@@ -2,10 +2,9 @@ import { useContext } from "react";
 import { profileData } from "../pages";
 
 export default function Repositories() {
-  // const{searchResult} = useContext(profileData)
-  const { darkTheme } = useContext(profileData);
-
-  //   const{repos, following, followers} = searchResult
+  const { darkTheme, searchResult } = useContext(profileData);
+  console.log(searchResult)
+  const { public_repos, following, followers } = searchResult;
   return (
     <div
       className="repositories"
@@ -20,17 +19,17 @@ export default function Repositories() {
     >
       <div className="repositories__repos">
         <p className="repositories__following__title">Repos</p>
-        <p className="repositories__repos__value">6969</p>
+        <p className="repositories__repos__value">{public_repos}</p>
       </div>
 
       <div className="repositories__following">
         <p className="repositories__following__title">Following</p>
-        <p className="repositories__following__value">6969</p>
+        <p className="repositories__following__value">{following}</p>
       </div>
 
       <div className="repositories__followers">
         <p className="repositories__following__title">followers</p>
-        <p className="repositories__followers__value">6969</p>
+        <p className="repositories__followers__value">{followers}</p>
       </div>
     </div>
   );

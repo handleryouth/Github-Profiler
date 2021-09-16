@@ -4,15 +4,14 @@ import axios from "axios";
 import { profileData } from "../pages";
 
 export default function Input() {
-  // const {setSearchResult} = useContext(profileData)
-  const { darkTheme } = useContext(profileData);
+  const { darkTheme, setSearchResult } = useContext(profileData);
   const [user, setUser] = useState("");
 
   const handleSearchUser = (value) => {
-    // axios
-    //   .get(`https://api.github.com/users/${value}`)
-    //   .then((res) => setSearchResult(res.data))
-    //   .catch((err) => console.log(err));
+    axios
+      .get(`https://api.github.com/users/${value}`)
+      .then((res) => setSearchResult(res.data))
+      .catch((err) => console.log(err));
   };
 
   return (
