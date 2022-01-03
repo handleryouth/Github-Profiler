@@ -1,10 +1,16 @@
-import { useContext } from "react";
-import { profileData } from "../pages";
 import format from "date-fns/format";
 
-export default function ProfileName() {
-  const { searchResult } = useContext(profileData);
-  const { name, login, created_at } = searchResult;
+interface ProfileNameProps {
+  created_at: string;
+  name: string;
+  login: string;
+}
+
+export default function ProfileName({
+  created_at,
+  login,
+  name,
+}: ProfileNameProps) {
   const convertedDate = format(new Date(created_at), "PPP");
   return (
     <div className="profilename">

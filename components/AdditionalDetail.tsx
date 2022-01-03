@@ -1,10 +1,18 @@
 import Image from "next/image";
-import { useContext } from "react";
-import { profileData } from "../pages";
 
-export default function AdditionalDetail() {
-  const { searchResult } = useContext(profileData);
-  const { location, twitter_username, company, blog } = searchResult;
+interface AdditionalDetailProps {
+  twitter_username: string;
+  blog: string;
+  company: string;
+  location: string;
+}
+
+export default function AdditionalDetail({
+  twitter_username,
+  blog,
+  company,
+  location,
+}: AdditionalDetailProps) {
   return (
     <div className="additionaldetail">
       <div className="additionaldetail__location">
@@ -13,10 +21,9 @@ export default function AdditionalDetail() {
           alt="location icon"
           width="14px"
           height="20px"
+          layout="fixed"
         />
-        <p>
-          {location !== null ? location : "Unavailable"}
-        </p>
+        <p>{location ? location : "Unavailable"}</p>
       </div>
 
       <div className="additionaldetail__twitter">
@@ -25,10 +32,9 @@ export default function AdditionalDetail() {
           alt="twitter icon"
           width="20px"
           height="20px"
+          layout="fixed"
         />
-        <p>
-          {twitter_username !== null ? twitter_username : "Unavailable"}
-        </p>
+        <p>{twitter_username ? twitter_username : "Unavailable"}</p>
       </div>
 
       <div className="additionaldetail__blog">
@@ -37,10 +43,9 @@ export default function AdditionalDetail() {
           alt="website icon"
           width="20px"
           height="20px"
+          layout="fixed"
         />
-        <p>
-          {blog !== "" ? blog : "Unavailable"}
-        </p>
+        <p>{blog ? blog : "Unavailable"}</p>
       </div>
 
       <div className="additionaldetail__company">
@@ -49,10 +54,9 @@ export default function AdditionalDetail() {
           alt="Company Icon"
           width="20px"
           height="20px"
+          layout="fixed"
         />
-        <p>
-          {company !== null ? company : "Unavailable"}
-        </p>
+        <p>{company ? company : "Unavailable"}</p>
       </div>
     </div>
   );

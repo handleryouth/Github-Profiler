@@ -7,4 +7,16 @@
   justify-content: center;
   align-items: center;
   min-width: 320px;
+  @media (min-width: 640px) {
+    min-height: 100vh;
+  }
+
+  &__content {
+    width: 100%;
+    @include flexContainer(row, center, center);
+  }
+
+  &__input {
+    width: 100%;
+  }
 }

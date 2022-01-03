@@ -3,11 +3,11 @@
   border-radius: 10px;
   display: flex;
   padding: 2rem;
-  @media (max-width: 768px){
-    padding: clamp(0rem, 2vw, 2rem);
-    width: clamp(19rem, 84vw, 40rem);
+  min-width: 320px;
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
 
   &__imagecontainer,
@@ -22,7 +22,7 @@
   &__profilecontainer {
     flex-grow: 1;
     margin-left: 1.5rem;
-    @media (max-width: 508px){
+    @media (max-width: 508px) {
       margin-left: 0;
       text-align: center;
     }

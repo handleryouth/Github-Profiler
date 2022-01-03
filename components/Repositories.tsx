@@ -1,22 +1,16 @@
-import { useContext } from "react";
-import { profileData } from "../pages";
+interface RepositoriesProps {
+  public_repos: number;
+  following: number;
+  followers: number;
+}
 
-export default function Repositories() {
-  const { darkTheme, searchResult } = useContext(profileData);
-  console.log(searchResult)
-  const { public_repos, following, followers } = searchResult;
+export default function Repositories({
+  followers,
+  public_repos,
+  following,
+}: RepositoriesProps) {
   return (
-    <div
-      className="repositories"
-      style={
-        darkTheme
-          ? { backgroundColor: "#1e2a47" }
-          : {
-              backgroundColor: "white",
-              boxShadow: "-1px -1px 5px 0px rgba(0,0,0,0.75)",
-            }
-      }
-    >
+    <div className="repositories">
       <div className="repositories__repos">
         <p className="repositories__following__title">Repos</p>
         <p className="repositories__repos__value">{public_repos}</p>

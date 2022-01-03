@@ -1,12 +1,15 @@
 .input {
-  width: $width;
   display: flex;
+  width: 90%;
   align-items: center;
   border-radius: 10px;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  min-width: 320px;
+  max-width: $width;
   @media (max-width: 768px) {
     padding: 1rem clamp(0.5rem, 2vw, 1rem);
+    min-width: 320px;
   }
   &__input {
     height: 2.8rem;
@@ -15,21 +18,17 @@
     padding: 0 1rem;
     margin: 0 1rem;
     @media (max-width: 768px) {
+      width: auto;
+      flex-grow: 1;
       font-size: clamp(0.8rem, 2vw, 1rem);
-      width: clamp(9rem, 57vw, 27rem);
-      padding: 0 clamp(0.4rem, 2vw, 1rem);
       margin: 0 clamp(0.4rem, 3vw, 1rem);
     }
   }
   &__button {
     height: 2.8rem;
-    width: 6rem;
+    width: auto;
     @media (max-width: 768px) {
       font-size: clamp(0.8rem, 2vw, 1rem);
-      width: clamp(4rem, 14vw, 6rem);
     }
-  }
-  @media (max-width: 768px) {
-    width: clamp(19rem, 84vw, 40rem);
   }
 }
